@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="bs.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calc">
+        <input type="text" id="inp" >
+        <div class="row opr">
+            <div class="col-mds-3">
+                <button class="btn-dark box " value="7" id="7"onclick="sev(this)">7</button>
+                <button class="btn-dark box " value="8" id="8"onclick="sev(this)">8</button>
+                <button class="btn-dark box " value="9" id="9"onclick="sev(this)">9</button>
+                <button class="btn-dark text-warning box " value="+" id="plus"onclick="sum(this)">+</button>
+                <button class="btn-dark box " value="4" id="4"onclick="sev(this)">4</button>
+                <button class="btn-dark box " value="5" id="5"onclick="sev(this)">5</button>
+                <button class="btn-dark box " value="6" id="6"onclick="sev(this)">6</button>
+                <button class="btn-dark text-warning box " value="-" id="minus"onclick="sum(this)">-</button>
+                <button class="btn-dark box " value="1" id="1"onclick="sev(this)">1</button>
+                <button class="btn-dark box " value="2" id="2"onclick="sev(this)">2</button>
+                <button class="btn-dark box " value="3" id="3"onclick="sev(this)">3</button>
+                <button class="btn-dark text-warning box " value="*" id="mul"onclick="sum(this)">x</button>
+                <button class=" btn-dark box " value="del" id="del"onclick="del(this)">C</button>
+                <button class="btn-dark box " value="0" id="0"onclick="sev(this)">0</button>
+                <button class="btn-warning box text-light" value="=" id="equal"onclick="ok(this)">=</button>
+                <button class="btn-dark box text-warning" value="/" id="div"onclick="sum(this)">/</button>
+            </div> 
+        </div>
+</body>
+<script>
+    var inp=document.getElementById("inp");
+    var temp,num1;
+    
+     function sev(num){
+       inp.value+=num.value;
+       num1=num.value;
+     }
+     function sum(op){
+         inp.value+=op.value;
+         temp=op.value;
+        
+     }
+     function ok(res){
+       res=eval(inp.value,temp)
+       inp.value=res;
+       
+     }
+    function del(empty){
+        inp.value="";
+    }
+</script>
+</html>

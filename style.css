@@ -1,0 +1,32 @@
+.calc{
+    border: 1px solid black;
+    width: 320px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 5rem;
+    overflow: hidden;
+    box-shadow: -3px -3px 3px rgb(43, 44, 44);
+    border-radius:.7rem;
+}
+input{
+    width:100%;
+    overflow: hidden;
+    height: 68px;
+    text-align: right;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.box{
+    width:5rem;
+    height: 3.6rem;
+    padding: 1rem;
+    border-radius: 8px;
+
+}
+.box:hover{
+    background-color: rgb(127, 241, 182);
+    color: black;
+}
